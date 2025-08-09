@@ -1,0 +1,138 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:lightblue;
+    user-select: none;
+}
+
+.birthday-card {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: .4s;
+}
+
+.birthday-card:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .15), 0 10px 100px rgba(0, 0, 0, .3);
+}
+
+.birthday-card:hover .card-front {
+    transform: rotateY(-160deg);
+}
+
+.birthday-card:hover .front-text {
+    display: none;
+}
+
+.birthday-card:hover .wrap-deco {
+    display: none;
+}
+
+.birthday-card:hover .wrap-decoTwo {
+    display: none;
+}
+.birthday-card:hover .plate {
+    display: none;
+}
+
+.card-front {
+    position: relative;
+    background-color: white;
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .3), 30px 0 50px rgba(0, 0, 0, .1);
+    transition: .4s;
+}
+
+.cardInside {
+    position: absolute;
+    z-index: -1;
+    background-color: #fff;
+    width: 350px;
+    height: 500px;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2);
+}
+
+.front-text .happy,.front-text .toyou {
+    position: relative;
+    font-family: didot;
+    text-align: center;
+    backface-visibility: hidden;
+    font-size: 30px;
+}
+
+.front-text .happy {
+    top: 270px;
+}
+
+.front-text .toyou {
+    top: 230px;
+}
+
+.front-text .bday {
+   position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    top: 250px;
+}
+
+.cake {
+    position: absolute;
+    width: 115px;
+    top: -120px;
+    left: 60px;
+    font-size: 160px;
+}
+
+.cardInside {
+    background: url('back2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inside-text {
+    top: 0;
+    transform: scale(0.75);
+}
+
+.inside-text .happy,.inside-text .toyou {
+    font-family: didot;
+    text-align: center;
+    backface-visibility: hidden;
+    font-size: 20px;
+}
+
+.inside-text .bday {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.wishes {
+    position: relative;
+    font-family: brush script MT;
+}
+
+.typing {
+    font-size: 30px;
+}
+
+.name {
+    font-family: didot;
+    font-size: 25px;
+}
+
+#my-name {
+    margin-left: 100px;
+}
